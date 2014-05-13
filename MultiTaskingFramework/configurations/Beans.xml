@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:annotation-config/>
+   	
+   	<!-- Category beans -->
+   	<bean id="category1" class="org.infra.opti.multiTasking.models.Category" scope="prototype">
+       <property name="categoryId" value="1"/>
+       <property name="categoryName" value="Menss"/>
+       <property name="categoryDescription" value="Men related items!"/>
+   	</bean>
+   	<bean id="category2" class="org.infra.opti.multiTasking.models.Category" scope="prototype">
+       <property name="categoryId" value="2"/>
+       <property name="categoryName" value="Women's"/>
+       <property name="categoryDescription" value="Women related items!"/>
+   	</bean>
+   	<bean id="category3" class="org.infra.opti.multiTasking.models.Category" scope="prototype">
+       <property name="categoryId" value="3"/>
+       <property name="categoryName" value="Electronics"/>
+       <property name="categoryDescription" value="Electronic items!"/>
+   	</bean>
+   	<bean id="category4" class="org.infra.opti.multiTasking.models.Category" scope="prototype">
+       <property name="categoryId" value="4"/>
+       <property name="categoryName" value="Sports"/>
+       <property name="categoryDescription" value="Sports items!"/>
+   	</bean>
+   	
+   	<!-- Pack type information -->
+   	<bean id="pack1" class="org.infra.opti.multiTasking.models.PackType" scope="prototype">
+       <property name="typeId" value="1"/>
+       <property name="typeName" value="Casual"/>
+       <property name="typeDescription" value="Casual dressing!"/>
+   	</bean>
+   	<bean id="pack2" class="org.infra.opti.multiTasking.models.PackType" scope="prototype">
+       <property name="typeId" value="2"/>
+       <property name="typeName" value="Formals"/>
+       <property name="typeDescription" value="Formal dressing!"/>
+   	</bean>
+   	<bean id="pack3" class="org.infra.opti.multiTasking.models.PackType" scope="prototype">
+       <property name="typeId" value="3"/>
+       <property name="typeName" value="Plastic"/>
+       <property name="typeDescription" value="Plastic packing!"/>
+   	</bean>   	
+   	<bean id="pack4" class="org.infra.opti.multiTasking.models.PackType" scope="prototype">
+       <property name="typeId" value="4"/>
+       <property name="typeName" value="HardBoard"/>
+       <property name="typeDescription" value="HardBoard packing!"/>
+   	</bean>
+   	
+   	<!-- Product dimension information -->
+   	<bean id="dim1" class="org.infra.opti.multiTasking.models.Dimensions" scope="prototype">
+       <property name="depth" value="4"/>
+       <property name="height" value="2.5"/>
+       <property name="width" value="3"/>
+   	</bean>
+   	<bean id="dim2" class="org.infra.opti.multiTasking.models.Dimensions" scope="prototype">
+       <property name="depth" value="2"/>
+       <property name="height" value="2"/>
+       <property name="width" value="3.5"/>
+   	</bean>
+   	<bean id="dim3" class="org.infra.opti.multiTasking.models.Dimensions" scope="prototype">
+       <property name="depth" value="4.5"/>
+       <property name="height" value="3"/>
+       <property name="width" value="3"/>
+   	</bean>
+   	<bean id="dim4" class="org.infra.opti.multiTasking.models.Dimensions" scope="prototype">
+       <property name="depth" value="2"/>
+       <property name="height" value="4"/>
+       <property name="width" value="3.5"/>
+   	</bean>
+   	<bean id="dim5" class="org.infra.opti.multiTasking.models.Dimensions" scope="prototype">
+       <property name="depth" value="6"/>
+       <property name="height" value="5"/>
+       <property name="width" value="6"/>
+   	</bean>
+   	<bean id="dim6" class="org.infra.opti.multiTasking.models.Dimensions" scope="prototype">
+       <property name="depth" value="1"/>
+       <property name="height" value="1"/>
+       <property name="width" value="1"/>
+   	</bean>
+
+   	<!-- Product version information -->
+   	<bean id="version1_1" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="1"/>
+       <property name="productVersionId" value="1"/>
+       <property name="packType" ref="pack2"/>
+       <property name="profit" value="2.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="8.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version1_2" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="1"/>
+       <property name="productVersionId" value="2"/>
+       <property name="packType" ref="pack1"/>
+       <property name="profit" value="23.5"/>
+       <property name="revenue" value="101.5"/>
+       <property name="price" value="68.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version1_3" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="1"/>
+       <property name="productVersionId" value="3"/>
+       <property name="packType" ref="pack3"/>
+       <property name="profit" value="52.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="48.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version1_4" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="1"/>
+       <property name="productVersionId" value="4"/>
+       <property name="packType" ref="pack1"/>
+       <property name="profit" value="21.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="82.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version1_5" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="1"/>
+       <property name="productVersionId" value="5"/>
+       <property name="packType" ref="pack4"/>
+       <property name="profit" value="12.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="8.15"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	
+   	<bean id="version2_1" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="2"/>
+       <property name="productVersionId" value="1"/>
+       <property name="packType" ref="pack2"/>
+       <property name="profit" value="2.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="8.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version2_2" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="2"/>
+       <property name="productVersionId" value="2"/>
+       <property name="packType" ref="pack1"/>
+       <property name="profit" value="23.5"/>
+       <property name="revenue" value="101.5"/>
+       <property name="price" value="68.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version2_3" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="2"/>
+       <property name="productVersionId" value="3"/>
+       <property name="packType" ref="pack3"/>
+       <property name="profit" value="52.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="48.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version2_4" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="2"/>
+       <property name="productVersionId" value="4"/>
+       <property name="packType" ref="pack1"/>
+       <property name="profit" value="21.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="82.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version2_5" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="2"/>
+       <property name="productVersionId" value="5"/>
+       <property name="packType" ref="pack4"/>
+       <property name="profit" value="12.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="8.15"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	
+   	<bean id="version3_1" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="3"/>
+       <property name="productVersionId" value="1"/>
+       <property name="packType" ref="pack2"/>
+       <property name="profit" value="2.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="8.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version3_2" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="3"/>
+       <property name="productVersionId" value="2"/>
+       <property name="packType" ref="pack1"/>
+       <property name="profit" value="23.5"/>
+       <property name="revenue" value="101.5"/>
+       <property name="price" value="68.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version3_3" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="3"/>
+       <property name="productVersionId" value="3"/>
+       <property name="packType" ref="pack3"/>
+       <property name="profit" value="52.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="48.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version3_4" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="3"/>
+       <property name="productVersionId" value="4"/>
+       <property name="packType" ref="pack1"/>
+       <property name="profit" value="21.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="82.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version3_5" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="3"/>
+       <property name="productVersionId" value="5"/>
+       <property name="packType" ref="pack4"/>
+       <property name="profit" value="12.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="8.15"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	
+   	<bean id="version4_1" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="4"/>
+       <property name="productVersionId" value="1"/>
+       <property name="packType" ref="pack2"/>
+       <property name="profit" value="2.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="8.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version4_2" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="4"/>
+       <property name="productVersionId" value="2"/>
+       <property name="packType" ref="pack1"/>
+       <property name="profit" value="23.5"/>
+       <property name="revenue" value="101.5"/>
+       <property name="price" value="68.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version4_3" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="4"/>
+       <property name="productVersionId" value="3"/>
+       <property name="packType" ref="pack3"/>
+       <property name="profit" value="52.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="48.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version4_4" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="4"/>
+       <property name="productVersionId" value="4"/>
+       <property name="packType" ref="pack1"/>
+       <property name="profit" value="21.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="82.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version4_5" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="4"/>
+       <property name="productVersionId" value="5"/>
+       <property name="packType" ref="pack4"/>
+       <property name="profit" value="12.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="8.15"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	
+   	<bean id="version5_1" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="5"/>
+       <property name="productVersionId" value="1"/>
+       <property name="packType" ref="pack2"/>
+       <property name="profit" value="2.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="8.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version5_2" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="5"/>
+       <property name="productVersionId" value="2"/>
+       <property name="packType" ref="pack1"/>
+       <property name="profit" value="23.5"/>
+       <property name="revenue" value="101.5"/>
+       <property name="price" value="68.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version5_3" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="5"/>
+       <property name="productVersionId" value="3"/>
+       <property name="packType" ref="pack3"/>
+       <property name="profit" value="52.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="48.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version5_4" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="5"/>
+       <property name="productVersionId" value="4"/>
+       <property name="packType" ref="pack1"/>
+       <property name="profit" value="21.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="82.5"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	<bean id="version5_5" class="org.infra.opti.multiTasking.models.ProductVersion" scope="prototype">
+       <property name="productId" value="5"/>
+       <property name="productVersionId" value="5"/>
+       <property name="packType" ref="pack4"/>
+       <property name="profit" value="12.5"/>
+       <property name="revenue" value="10.5"/>
+       <property name="price" value="8.15"/>
+       <property name="dimension" ref="dim1"/>
+   	</bean>
+   	
+   	<!-- Product information -->
+   	<bean id="product1" class="org.infra.opti.multiTasking.models.Product" scope="prototype">
+		<constructor-arg type="int" value="1"/>
+		<constructor-arg type="String" value="Product1"/>
+		<constructor-arg type="String" value="Product 1"/>
+		<property name="versionInformation">
+			<list>
+				<ref bean="version1_1"/>
+				<ref bean="version1_2"/>
+				<ref bean="version1_3"/>
+				<ref bean="version1_4"/>
+				<ref bean="version1_5"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="product2" class="org.infra.opti.multiTasking.models.Product" scope="prototype">
+		<constructor-arg type="int" value="2"/>
+		<constructor-arg type="String" value="Product2"/>
+		<constructor-arg type="String" value="Product 2"/>
+		<property name="versionInformation">
+			<list>
+				<ref bean="version2_1"/>
+				<ref bean="version2_2"/>
+				<ref bean="version2_3"/>
+				<ref bean="version2_4"/>
+				<ref bean="version2_5"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="product3" class="org.infra.opti.multiTasking.models.Product" scope="prototype">
+		<constructor-arg type="int" value="3"/>
+		<constructor-arg type="String" value="Product3"/>
+		<constructor-arg type="String" value="Product 3"/>
+		<property name="versionInformation">
+			<list>
+				<ref bean="version3_1"/>
+				<ref bean="version3_2"/>
+				<ref bean="version3_3"/>
+				<ref bean="version3_4"/>
+				<ref bean="version3_5"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="product4" class="org.infra.opti.multiTasking.models.Product" scope="prototype">
+		<constructor-arg type="int" value="4"/>
+		<constructor-arg type="String" value="Product4"/>
+		<constructor-arg type="String" value="Product 4"/>
+		<property name="versionInformation">
+			<list>
+				<ref bean="version4_1"/>
+				<ref bean="version4_2"/>
+				<ref bean="version4_3"/>
+				<ref bean="version4_4"/>
+				<ref bean="version4_5"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="product5" class="org.infra.opti.multiTasking.models.Product" scope="prototype">
+		<constructor-arg type="int" value="5"/>
+		<constructor-arg type="String" value="Product5"/>
+		<constructor-arg type="String" value="Product 5"/>
+		<property name="versionInformation">
+			<list>
+				<ref bean="version5_1"/>
+				<ref bean="version5_2"/>
+				<ref bean="version5_3"/>
+				<ref bean="version5_4"/>
+				<ref bean="version5_5"/>
+			</list>
+		</property>
+	</bean>
+	
+</beans>
